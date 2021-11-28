@@ -4,6 +4,8 @@ import "swiper/swiper.min.css";
 import "swiper/components/effect-cube/effect-cube.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import SwiperCore, { Autoplay, EffectCube } from "swiper";
+import file from "../images/Резюме_Асель Акматова.pdf";
+import ScrollAnimation from "react-animate-on-scroll";
 SwiperCore.use([EffectCube, Autoplay]);
 
 export default function About() {
@@ -60,18 +62,14 @@ export default function About() {
               <p className="personal-info__item">
                 <b> Tel:</b> +996550627760
               </p>
-              <a
-                href="my-portfolio\src\images\Резюме_Асель Акматова.pdf"
-                download
-                className="personal-info__btn"
-              >
+              <a href={file} download className="personal-info__btn">
                 Download CV
               </a>
             </div>
           </article>
         </Animated>
         <article className="about-middle">
-          <Animated animationIn="slideInLeft" isVisible={true}>
+          <ScrollAnimation animateIn="slideInLeft">
             <div className="about-middle__education education">
               <h3 className="education__title">Education</h3>
               <h4 className="education__subtitle education__subtitle-first">
@@ -90,8 +88,8 @@ export default function About() {
                 Bootstrap, Figma, Bem, Jquery, ExpressJs
               </p>
             </div>
-          </Animated>
-          <Animated animationIn="slideInRight" isVisible={true}>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="slideInRight">
             <div className="about-middle__experience experience">
               <h3 className="experience__title">Experience</h3>
               <h4 className="experience__subtitle experience__subtitle-first">
@@ -109,11 +107,51 @@ export default function About() {
                 Guideing, translation french-russian-kyrgyz
               </p>
             </div>
-          </Animated>
+          </ScrollAnimation>
         </article>
-        <article>
-          <div></div>
-          <div></div>
+        <article className="about-bottom">
+          <ScrollAnimation animateIn="slideInLeft">
+            <div className="about-bottom__coding-skills coding-skills">
+              <h3 className="coding-skills__title">Coding skills</h3>
+              <label for="html5">HTML5</label>
+              <progress id="html5" max="100" value="75">
+                75%
+              </progress>
+              <label for="css3">CSS3</label>
+              <progress id="css3" max="100" value="70">
+                70%
+              </progress>
+              <label for="javascript">JavaScript</label>
+              <progress id="javascript" max="100" value="50">
+                50%
+              </progress>
+              <label for="react">React</label>
+              <progress id="react" max="100" value="60">
+                60%
+              </progress>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="slideInRight">
+            <div className="about-bottom__language-skills language-skills">
+              <h3 className="language-skills__title">language skills</h3>
+              <label for="kyrgyz">Kyrgyz</label>
+              <progress id="kyrgyz" max="100" value="100">
+                100%
+              </progress>
+              <label for="russian">Russian</label>
+              <progress id="russian" max="100" value="100">
+                100%
+              </progress>
+              <label for="english">English</label>
+              <progress id="english" max="100" value="75">
+                75%
+              </progress>
+              <label for="french">French</label>
+              <progress id="french" max="100" value="85">
+                85%
+              </progress>
+            </div>
+          </ScrollAnimation>
         </article>
       </section>
     </>
