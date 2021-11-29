@@ -1,0 +1,104 @@
+import { Facebook, Telegram, Whatsapp, Github } from "react-bootstrap-icons";
+import { Form, Alert } from "react-bootstrap";
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+export default function Contact() {
+  let [validated, setValidated] = useState(false);
+  let [form, setForm] = useState({});
+  let [messageAccepted, setMessageAccepted] = useState(false);
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setForm(() => {
+      return { ...form, [name]: value };
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form2 = event.currentTarget;
+
+    if (form2.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    setValidated(true);
+
+    if (form2.checkValidity()) {
+      setMessageAccepted(true);
+    }
+  };
+  return (
+    <>
+      <section className="contact">
+        <h2 className="contact__title">Contact me</h2>
+        <Form
+          className="contact__form"
+          noValidate
+          validated={validated}
+          onSubmit={handleSubmit}
+          hidden={messageAccepted}
+        >
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="text"
+              name="userName"
+              onChange={handleChange}
+              placeholder="Your name"
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              <p className="form-alert">Please enter your name </p>
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="email"
+              name="email"
+              onChange={handleChange}
+              placeholder="Your email"
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              <p className="form-alert">Please enter your email </p>
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Control
+              required
+              as="textarea"
+              name="message"
+              onChange={handleChange}
+              rows={5}
+              placeholder="Your message"
+            />
+            <Form.Control.Feedback type="invalid">
+              <p className="form-alert">Please enter your message</p>
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          <button className="form__btn" type="submit">
+            Send
+          </button>
+        </Form>
+        <div className="contact__icons">
+          <a href="#" target="_blank">
+            <Facebook size="35" color="white" />
+          </a>
+          <a href="#" target="_blank">
+            <Whatsapp size="35" color="white" />
+          </a>
+          <a href="#" target="_blank">
+            <Telegram size="35" color="white" />
+          </a>
+          <a href="#" target="_blank">
+            <Github size="35" color="white" />
+          </a>
+        </div>
+      </section>
+    </>
+  );
+}

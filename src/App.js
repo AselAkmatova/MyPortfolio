@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import PortfolioSaveTheAles from "./components/PortfolioSaveTheAles";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             path="/portfolio/savetheales"
             element={<PortfolioSaveTheAles />}
           />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </>
