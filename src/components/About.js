@@ -12,8 +12,8 @@ export default function About() {
   return (
     <>
       <section className="about">
-        <Animated animationIn="rollIn" isVisible={true}>
-          <article className="about-top">
+        <article className="about-top">
+          <Animated animationIn="slideInLeft" isVisible={true}>
             <Swiper
               effect={"cube"}
               autoplay={true}
@@ -42,6 +42,8 @@ export default function About() {
                 />
               </SwiperSlide>
             </Swiper>
+          </Animated>
+          <Animated animationIn="slideInRight" isVisible={true}>
             <div className="about-top__personal-info personal-info">
               <h3 className="personal-info__title">Personal Information</h3>
               <p className="personal-info__item">
@@ -66,8 +68,8 @@ export default function About() {
                 Download CV
               </a>
             </div>
-          </article>
-        </Animated>
+          </Animated>
+        </article>
         <article className="about-middle">
           <ScrollAnimation animateIn="slideInLeft">
             <div className="about-middle__education education">

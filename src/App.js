@@ -3,6 +3,8 @@ import "./styles/App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import PortfolioSaveTheAles from "./components/PortfolioSaveTheAles";
 
 function App() {
   return (
@@ -12,6 +14,11 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route
+            path="/portfolio/savetheales"
+            element={<PortfolioSaveTheAles />}
+          />
         </Routes>
       </Router>
     </>

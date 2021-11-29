@@ -3,11 +3,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
 
 * {
+  --main-color: #7c001b;
+  --hl-color: #febe27;
+  --text-color: #fff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
   font-family: "Raleway", sans-serif;
+  color: var(--text-color);
 }
 
 /**********************HEADER***********************/
@@ -15,7 +18,7 @@
 .header {
   width: 100%;
   height: 70px;
-  background-color: #000;
+  background-color: var(--main-color);
 }
 
 .header-nav {
@@ -23,6 +26,7 @@
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
+  color: var(--hl-color);
 }
 
 .header-nav__link,
@@ -38,7 +42,7 @@
 }
 
 .header-nav__link:hover {
-  color: #e01a4f;
+  color: var(--hl-color);
   font-weight: bold;
 }
 
@@ -51,7 +55,7 @@
   bottom: -3px;
   height: 2px;
   width: 0;
-  background: #e01a4f;
+  background: var(--hl-color);
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -67,7 +71,7 @@
   padding-top: 50px;
   min-width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: #000;
+  background-color: var(--main-color);
 }
 
 .home-main {
@@ -88,7 +92,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: var(--main-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -96,7 +100,7 @@
 }
 
 .home-main__frame div {
-  background-color: #fff;
+  background-color: var(--text-color);
   transition: transform 2s;
   -webkit-transition: transform 2s;
 }
@@ -106,15 +110,17 @@
 }
 
 .home-main__frame div:hover {
-  transform: scale(0.8);
-  -webkit-transform: scale(0.8);
+  /* transform: scale(0.8);
+  -webkit-transform: scale(0.8); */
   cursor: pointer;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 
 .home-text {
   position: absolute;
   z-index: 4000;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(82, 3, 3, 0.836);
   top: 40%;
   left: 34%;
   padding: 50px 20px;
@@ -129,7 +135,7 @@
 .home-text__subtitle {
   text-align: center;
   font-size: 32px;
-  color: #e01a4f;
+  color: var(--hl-color);
 }
 
 /*************************ABOUT*******************************/
@@ -138,13 +144,14 @@
   padding: 50px 100px;
   min-width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: #000;
+  background-color: var(--main-color);
 }
 
 .about-top {
   width: 100%;
   display: flex;
   margin-top: 50px;
+  justify-content: space-between;
 }
 
 .swiper-container.swiper-container-cube {
@@ -161,6 +168,7 @@
 .personal-info__title {
   margin-bottom: 30px;
   text-transform: uppercase;
+  align-self: center;
 }
 
 .personal-info__item {
@@ -168,7 +176,7 @@
 }
 
 .personal-info__item b {
-  color: #e01a4f;
+  color: var(--hl-color);
 }
 
 .personal-info__btn {
@@ -176,14 +184,14 @@
   margin-top: 25px;
   padding: 10px 15px;
   align-self: center;
-  border: 2px solid #e01a4f;
-  color: #e01a4f;
+  border: 2px solid var(--hl-color);
+  color: var(--hl-color);
   font-weight: bold;
 }
 
 .personal-info__btn:hover {
-  background-color: #e01a4f;
-  color: #fff;
+  background-color: var(--hl-color);
+  color: #000;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   border-radius: 50px;
@@ -201,7 +209,7 @@
 .education__item,
 .experience__subtitle,
 .experience__item {
-  border-left: 2px solid #e01a4f;
+  border-left: 2px solid var(--hl-color);
   padding-left: 20px;
 }
 
@@ -217,7 +225,7 @@
 .education__subtitle,
 .experience__subtitle {
   padding-bottom: 20px;
-  color: #e01a4f;
+  color: var(--hl-color);
   position: relative;
 }
 
@@ -228,7 +236,7 @@
   position: absolute;
   top: 0;
   left: -70px;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .education__subtitle-first::before {
@@ -260,15 +268,158 @@
 }
 
 progress {
-  background-color: #fff;
+  background-color: var(--text-color);
   width: 300px;
   display: block;
   margin-bottom: 20px;
 }
 
 progress::-webkit-progress-bar {
-  background-color: #fff;
+  background-color: var(--text-color);
 }
 progress::-webkit-progress-value {
-  background-color: #e01a4f;
+  background-color: var(--hl-color);
+}
+
+/****************************PORTFOLIO**************************/
+
+.portfolio {
+  padding: 50px 100px;
+  min-width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: var(--main-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  width: 20vw;
+  height: 40vh;
+  transition: 1s;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.portfolio:hover .card {
+  transform: scale(0.9);
+}
+
+.card:hover {
+  transform: scale(1.1) !important;
+}
+
+.card__title,
+.card__btn,
+.card__text {
+  display: none;
+}
+
+.card:hover .card__title {
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  color: var(--main-color);
+}
+
+.card:hover .card__text {
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 38%;
+  color: var(--hl-color);
+  font-weight: bold;
+}
+
+.card:hover .card__btn {
+  display: block;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  padding: 10px 20px;
+  color: var(--hl-color);
+  font-weight: bold;
+  border: 2px solid var(--hl-color);
+  background-color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card:hover .card__btn:hover {
+  background-color: var(--hl-color);
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.card:hover::before {
+  content: "";
+  position: absolute;
+  width: 20vw;
+  height: 40vh;
+  background-color: var(--text-color);
+  border-radius: 20px;
+}
+
+/*************SAVE_THE_ALES******************/
+
+.save-the-ales {
+  padding: 50px 100px;
+  min-width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: var(--main-color);
+}
+
+.save-the-ales .swiper-container,
+.save-the-ales .swiper-slide,
+.save-the-ales .swiper-slide-active {
+  width: 55%;
+  height: 50vh;
+  margin: 0 auto 15px;
+}
+
+.save-the-ales img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-theme-color: var(--hl-color);
+}
+
+.save-the-ales__title {
+  color: var(--hl-color);
+  font-size: 25px;
+}
+
+.save-the-ales__text {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.save-the-ales__btn {
+  display: block;
+  width: 180px;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  background: var(--hl-color);
+  font-size: 20px;
+}
+
+.save-the-ales__btn:hover {
+  background: var(--main-color);
+  border: 2px solid var(--hl-color);
 }
