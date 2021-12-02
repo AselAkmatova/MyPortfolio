@@ -114,11 +114,15 @@
 }
 
 .home-main__frame div:hover {
-  /* transform: scale(0.8);
-  -webkit-transform: scale(0.8); */
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
   cursor: pointer;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
+}
+
+.home-main__frame div:nth-of-type(2) {
+  grid-column: 2/4;
 }
 
 .home-text {
@@ -151,6 +155,17 @@
   background-color: var(--main-color);
 }
 
+.about__title {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  color: var(--hl-color);
+}
+
+.about h3 {
+  font-size: 20px;
+}
+
 .about-top {
   width: 100%;
   display: flex;
@@ -177,6 +192,12 @@
 
 .personal-info__item {
   margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a.personal-info__item:hover {
+  color: #febe27;
 }
 
 .personal-info__item b {
@@ -215,6 +236,7 @@
 .experience__item {
   border-left: 2px solid var(--hl-color);
   padding-left: 20px;
+  margin: 0;
 }
 
 .education__title,
@@ -231,6 +253,7 @@
   padding-bottom: 20px;
   color: var(--hl-color);
   position: relative;
+  font-size: 20px;
 }
 
 .education__subtitle::before,
@@ -311,7 +334,7 @@ progress::-webkit-progress-value {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .portfolio:hover .card {
@@ -332,7 +355,7 @@ progress::-webkit-progress-value {
   display: block;
   position: absolute;
   top: 20%;
-  left: 28%;
+  left: 18%;
   color: #000;
 }
 
@@ -340,7 +363,7 @@ progress::-webkit-progress-value {
   display: block;
   position: absolute;
   top: 35%;
-  left: 38%;
+  left: 37%;
   color: var(--main-color);
   font-weight: bold;
 }
@@ -349,7 +372,7 @@ progress::-webkit-progress-value {
   display: block;
   position: absolute;
   top: 55%;
-  left: 25%;
+  left: 23%;
   padding: 10px 20px;
   color: var(--main-color);
   font-weight: bold;
@@ -371,7 +394,7 @@ progress::-webkit-progress-value {
   width: 20vw;
   height: 40vh;
   background-color: rgba(241, 214, 214, 0.904);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /*************SAVE_THE_ALES******************/
@@ -460,6 +483,7 @@ progress::-webkit-progress-value {
   border: none;
   font-weight: bold;
   text-transform: uppercase;
+  border-radius: 5px;
 }
 
 .form__btn:hover {

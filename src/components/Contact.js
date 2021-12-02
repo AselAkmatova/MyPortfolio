@@ -1,7 +1,8 @@
 import { Facebook, Telegram, Whatsapp, Github } from "react-bootstrap-icons";
-import { Form, Alert } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Animated } from "react-animated-css";
 
 export default function Contact() {
   let [validated, setValidated] = useState(false);
@@ -33,7 +34,9 @@ export default function Contact() {
   return (
     <>
       <section className="contact">
-        <h2 className="contact__title">Contact me</h2>
+        <Animated animationIn="zoomIn" isVisible={true}>
+          <h2 className="contact__title">Contact me</h2>
+        </Animated>
         <Form
           className="contact__form"
           noValidate
@@ -41,63 +44,71 @@ export default function Contact() {
           onSubmit={handleSubmit}
           hidden={messageAccepted}
         >
-          <Form.Group className="mb-3">
-            <Form.Control
-              type="text"
-              name="userName"
-              onChange={handleChange}
-              placeholder="Your name"
-              required
-            />
-            <Form.Control.Feedback type="invalid">
-              <p className="form-alert">Please enter your name </p>
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Control
-              type="email"
-              name="email"
-              onChange={handleChange}
-              placeholder="Your email"
-              required
-            />
-            <Form.Control.Feedback type="invalid">
-              <p className="form-alert">Please enter your email </p>
-            </Form.Control.Feedback>
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Control
-              required
-              as="textarea"
-              name="message"
-              onChange={handleChange}
-              rows={5}
-              placeholder="Your message"
-            />
-            <Form.Control.Feedback type="invalid">
-              <p className="form-alert">Please enter your message</p>
-            </Form.Control.Feedback>
-          </Form.Group>
-
-          <button className="form__btn" type="submit">
-            Send
-          </button>
+          <Animated animationIn="slideInLeft" isVisible={true}>
+            <Form.Group className="mb-3">
+              <Form.Control
+                type="text"
+                name="userName"
+                onChange={handleChange}
+                placeholder="Your name"
+                required
+              />
+              <Form.Control.Feedback type="invalid">
+                <p className="form-alert">Please enter your name </p>
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Animated>
+          <Animated animationIn="slideInRight" isVisible={true}>
+            <Form.Group className="mb-3">
+              <Form.Control
+                type="email"
+                name="email"
+                onChange={handleChange}
+                placeholder="Your email"
+                required
+              />
+              <Form.Control.Feedback type="invalid">
+                <p className="form-alert">Please enter your email </p>
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Animated>
+          <Animated animationIn="slideInLeft" isVisible={true}>
+            <Form.Group className="mb-3">
+              <Form.Control
+                required
+                as="textarea"
+                name="message"
+                onChange={handleChange}
+                rows={5}
+                placeholder="Your message"
+              />
+              <Form.Control.Feedback type="invalid">
+                <p className="form-alert">Please enter your message</p>
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Animated>
+          <Animated animationIn="slideInRight" isVisible={true}>
+            <button className="form__btn" type="submit">
+              Send
+            </button>
+          </Animated>
         </Form>
-        <div className="contact__icons">
-          <a href="#" target="_blank">
-            <Facebook size="35" color="white" />
-          </a>
-          <a href="#" target="_blank">
-            <Whatsapp size="35" color="white" />
-          </a>
-          <a href="#" target="_blank">
-            <Telegram size="35" color="white" />
-          </a>
-          <a href="#" target="_blank">
-            <Github size="35" color="white" />
-          </a>
-        </div>
+        <Animated animationIn="slideInLeft" isVisible={true}>
+          <div className="contact__icons">
+            <a href="https://www.facebook.com/asel.akmatova/" target="_blank">
+              <Facebook size="35" color="white" />
+            </a>
+            <a href="https://wa.me/+996550627760" target="_blank">
+              <Whatsapp size="35" color="white" />
+            </a>
+            <a href="https://telegram.me/asel_akmatova" target="_blank">
+              <Telegram size="35" color="white" />
+            </a>
+            <a href="https://github.com/AselAkmatova" target="_blank">
+              <Github size="35" color="white" />
+            </a>
+          </div>
+        </Animated>
       </section>
     </>
   );

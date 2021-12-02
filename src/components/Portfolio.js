@@ -46,9 +46,6 @@ export default function Portfolio() {
             <img className="card__image" src={image5} alt="coming soon" />
             <h3 className="card__title">Coming Soon</h3>
             <span className="card__text">Not yet </span>
-            <Link className="card__btn" to="/portfolio/savetheales">
-              Learn more
-            </Link>
           </div>
         </Animated>
       </section>

@@ -12,6 +12,9 @@ export default function About() {
   return (
     <>
       <section className="about">
+        <Animated animationIn="zoomIn" isVisible={true}>
+          <h1 className="about__title">About me</h1>
+        </Animated>
         <article className="about-top">
           <Animated animationIn="slideInLeft" isVisible={true}>
             <Swiper
@@ -55,15 +58,20 @@ export default function About() {
               <p className="personal-info__item">
                 <b>Residence:</b> Bishkek, Kyrgyzstan
               </p>
-              <p className="personal-info__item">
-                <b>Address:</b> 19/1 Tokombaeva Str.{" "}
-              </p>
-              <p className="personal-info__item">
+              <a
+                href="mailto:aselakmatova20kb@gmail.com"
+                target="_blank"
+                className="personal-info__item"
+              >
                 <b> Email:</b> aselakmatova20kb@gmail.com
-              </p>
-              <p className="personal-info__item">
+              </a>
+              <a
+                href="tel:+996550627760"
+                target="_blank"
+                className="personal-info__item"
+              >
                 <b> Tel:</b> +996550627760
-              </p>
+              </a>
               <a href={file} download className="personal-info__btn">
                 Download CV
               </a>
