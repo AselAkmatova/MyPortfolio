@@ -31,10 +31,12 @@
 
   .card:hover .card__title {
     font-size: 22px;
+    left: 25%;
   }
 
   .card:hover .card__btn {
     padding: 5px 10px;
+    left: 28%;
   }
 }
 
@@ -201,6 +203,7 @@
 
   .card:hover .card__btn {
     padding: 5px 10px;
+    left: 20%;
   }
 
   .card,
@@ -314,10 +317,17 @@
 
   .card:hover .card__title {
     font-size: 20px;
+    left: 10%;
+  }
+
+  .card:hover .card__text {
+    left: 28%;
   }
 
   .card:hover .card__btn {
     padding: 5px 10px;
+    left: 16%;
+    font-size: 14px;
   }
 
   .card,
