@@ -131,7 +131,8 @@
   background-color: rgba(82, 3, 3, 0.836);
   top: 40%;
   left: 34%;
-  padding: 50px 20px;
+  padding: 50px 0;
+  width: 35%;
 }
 
 .home-text__title {
@@ -149,7 +150,7 @@
 /*************************ABOUT*******************************/
 
 .about {
-  padding: 50px 100px;
+  padding: 50px;
   min-width: 100%;
   min-height: calc(100vh - 70px);
   background-color: var(--main-color);

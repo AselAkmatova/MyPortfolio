@@ -1,0 +1,381 @@
+@media (min-width: 1000px) and (max-width: 1200px) {
+  /*****************************HOME*************************/
+
+  .home-text__title {
+    font-size: 48px;
+  }
+
+  .home-text__subtitle {
+    font-size: 27px;
+  }
+
+  /*************************ABOUT*******************************/
+  .about {
+    padding: 50px 20px;
+  }
+
+  .swiper-container.swiper-container-cube {
+    width: 400px;
+  }
+
+  .personal-info {
+    margin-right: 100px;
+  }
+
+  .about-middle,
+  .about-bottom {
+    width: 80%;
+  }
+
+  /****************************PORTFOLIO**************************/
+
+  .card:hover .card__title {
+    font-size: 22px;
+  }
+
+  .card:hover .card__btn {
+    padding: 5px 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  /*****************************HOME*************************/
+
+  .home-text {
+    left: 30%;
+    width: 42%;
+  }
+
+  .home-text__title {
+    font-size: 40px;
+  }
+
+  .home-text__subtitle {
+    font-size: 27px;
+  }
+
+  /*************************ABOUT*******************************/
+  .about {
+    padding: 50px 30px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .swiper-container.swiper-container-cube {
+    width: 350px;
+    margin-left: 20px;
+  }
+  .swiper-container img {
+    width: 350px;
+  }
+
+  .personal-info {
+    margin-right: 50px;
+  }
+
+  .education__subtitle,
+  .education__item,
+  .experience__subtitle,
+  .experience__item {
+    padding-left: 5px;
+  }
+
+  .about-middle {
+    width: 90%;
+  }
+
+  .education {
+    margin-left: 10px;
+  }
+
+  .about-bottom {
+    width: 90%;
+  }
+
+  .education__subtitle::before,
+  .experience__subtitle::before {
+    left: -50px;
+    font-size: 15px;
+  }
+
+  /****************************PORTFOLIO**************************/
+
+  .card:hover .card__title {
+    font-size: 22px;
+  }
+
+  .card:hover .card__btn {
+    padding: 5px 10px;
+  }
+
+  .card {
+    width: 25vw;
+    height: 40vh;
+  }
+
+  .card:hover::before {
+    width: 25vw;
+    height: 40vh;
+  }
+
+  .save-the-ales .swiper-container,
+  .save-the-ales .swiper-slide,
+  .save-the-ales .swiper-slide-active {
+    width: 70%;
+  }
+
+  .save-the-ales img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  /*****************************HOME*************************/
+
+  .home-main {
+    width: 80%;
+  }
+
+  .home-text {
+    left: 15%;
+    width: 70%;
+  }
+
+  .home-text__title {
+    font-size: 35px;
+  }
+
+  .home-text__subtitle {
+    font-size: 20px;
+  }
+
+  /*************************ABOUT*******************************/
+  .about {
+    padding: 50px 30px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .swiper-container.swiper-container-cube {
+    width: 300px;
+    margin: 0;
+  }
+
+  .swiper-container img {
+    width: 300px;
+  }
+
+  .about-top,
+  .about-middle,
+  .about-bottom {
+    flex-direction: column;
+    gap: 25px;
+    width: 70%;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+  .personal-info {
+    margin: 0;
+  }
+
+  .education__subtitle,
+  .education__item,
+  .experience__subtitle,
+  .experience__item {
+    padding-left: 5px;
+  }
+
+  .education__subtitle::before,
+  .experience__subtitle::before {
+    left: -50px;
+    font-size: 15px;
+  }
+
+  /****************************PORTFOLIO**************************/
+
+  .portfolio {
+    padding: 50px 30px;
+  }
+
+  .card:hover .card__title {
+    font-size: 20px;
+  }
+
+  .card:hover .card__btn {
+    padding: 5px 10px;
+  }
+
+  .card {
+    width: 40vw;
+    height: 40vh;
+  }
+
+  .card:hover::before {
+    width: 40vw;
+    height: 40vh;
+  }
+
+  .save-the-ales {
+    font-size: 16px;
+  }
+
+  .save-the-ales .swiper-container,
+  .save-the-ales .swiper-slide,
+  .save-the-ales .swiper-slide-active {
+    width: 100%;
+  }
+
+  .save-the-ales img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact__icons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 499px) {
+  /*****************************HOME*************************/
+
+  .home {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .home-main {
+    width: 100%;
+    height: 50vh;
+    margin: 0;
+  }
+
+  .home-text {
+    top: 45%;
+    left: 0;
+    width: 100%;
+  }
+
+  .home-text__title {
+    font-size: 35px;
+  }
+
+  .home-text__subtitle {
+    font-size: 20px;
+  }
+
+  /*************************ABOUT*******************************/
+  .about {
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .swiper-container.swiper-container-cube {
+    width: 300px;
+    margin: 0;
+  }
+
+  .swiper-container img {
+    width: 300px;
+  }
+
+  .about-top,
+  .about-middle,
+  .about-bottom {
+    flex-direction: column;
+    gap: 25px;
+    width: 70%;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+  .personal-info {
+    margin: 0;
+  }
+
+  .about-middle {
+    margin-right: 10px;
+  }
+
+  .education__subtitle,
+  .education__item,
+  .experience__subtitle,
+  .experience__item {
+    padding-left: 5px;
+  }
+
+  .education__subtitle::before,
+  .experience__subtitle::before {
+    left: -50px;
+    font-size: 15px;
+  }
+
+  /****************************PORTFOLIO**************************/
+
+  .portfolio {
+    padding: 20px;
+  }
+
+  .card:hover .card__title {
+    font-size: 20px;
+  }
+
+  .card:hover .card__btn {
+    padding: 5px 10px;
+  }
+
+  .card {
+    width: 50vw;
+    height: 40vh;
+  }
+
+  .card:hover::before {
+    width: 50vw;
+    height: 40vh;
+  }
+
+  .save-the-ales {
+    padding: 20px 0;
+  }
+
+  .save-the-ales .swiper-container,
+  .save-the-ales .swiper-slide,
+  .save-the-ales .swiper-slide-active {
+    width: 100%;
+  }
+  .save-the-ales__text {
+    font-size: 14px;
+    padding: 10px 10px 0;
+  }
+
+  .save-the-ales__title {
+    font-size: 20px;
+  }
+
+  .save-the-ales__btn {
+    font-size: 16px;
+    width: 150px;
+  }
+
+  .save-the-ales img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact {
+    padding: 20px 0;
+  }
+
+  .contact__form {
+    width: 70vw;
+    margin: 0 auto 25px;
+  }
+
+  .contact__icons {
+    gap: 20px;
+  }
+}
