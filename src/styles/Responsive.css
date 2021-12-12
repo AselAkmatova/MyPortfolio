@@ -108,14 +108,10 @@
     padding: 5px 10px;
   }
 
-  .card {
-    width: 25vw;
-    height: 40vh;
-  }
-
+  .card,
   .card:hover::before {
-    width: 25vw;
-    height: 40vh;
+    width: 250px;
+    height: 250px;
   }
 
   .save-the-ales .swiper-container,
@@ -207,14 +203,10 @@
     padding: 5px 10px;
   }
 
-  .card {
-    width: 40vw;
-    height: 40vh;
-  }
-
+  .card,
   .card:hover::before {
-    width: 40vw;
-    height: 40vh;
+    width: 200px;
+    height: 200px;
   }
 
   .save-the-ales {
@@ -269,7 +261,7 @@
 
   /*************************ABOUT*******************************/
   .about {
-    padding: 20px 30px;
+    padding: 20px;
     font-size: 15px;
     font-weight: normal;
   }
@@ -297,8 +289,8 @@
     margin: 0;
   }
 
-  .about-middle {
-    margin-right: 10px;
+  .about h3 {
+    font-size: 18px;
   }
 
   .education__subtitle,
@@ -328,14 +320,10 @@
     padding: 5px 10px;
   }
 
-  .card {
-    width: 50vw;
-    height: 40vh;
-  }
-
+  .card,
   .card:hover::before {
-    width: 50vw;
-    height: 40vh;
+    width: 170px;
+    height: 170px;
   }
 
   .save-the-ales {
