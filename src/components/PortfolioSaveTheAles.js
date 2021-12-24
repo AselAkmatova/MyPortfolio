@@ -43,7 +43,7 @@ export default function PortfolioSaveTheAles() {
         <a
           className="save-the-ales__btn"
           target="_blank"
-          href="https://github.com/AselAkmatova/Save-the-ales"
+          href="https://github.com/AselAkmatova/SaveTheAles-2021"
         >
           View on GitHub
         </a>
