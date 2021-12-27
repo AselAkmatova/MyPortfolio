@@ -73,41 +73,44 @@
 /*****************************HOME*************************/
 
 .home {
-  padding-top: 20px;
+  padding-top: 25px;
   min-width: 100%;
   min-height: calc(100vh - 70px);
   background-color: var(--main-color);
 }
 
 .home-cover {
-  width: 50%;
-  height: 75vh;
-  margin-left: 15%;
+  width: 65%;
+  margin: 0 auto;
+  height: 80vh;
   background-color: var(--main-light-color);
+  position: relative;
 }
 
 .home-info {
   position: absolute;
   z-index: 10000;
-  top: 45%;
-  left: 25%;
+  top: 40%;
+  left: 12%;
 }
 
 .home-info__title {
   font-family: "Playfair Display", sans-serif;
-  font-size: 55px;
+  font-size: 54px;
   color: var(--text-color);
   font-weight: bold;
   margin-bottom: 10px;
+  letter-spacing: 0.05em;
 }
 
 .home-info__subtitle {
-  font-size: 28px;
+  font-size: 32px;
   color: var(--text-color);
   margin-bottom: 35px;
 }
 
-.home-info__btn {
+.home-info__btn,
+.home-info__btn:visited {
   text-decoration: none;
   text-align: center;
   font-weight: bold;
@@ -135,6 +138,7 @@
   display: block;
   transition: all 0.35s;
 }
+
 .home-info__btn:hover::after {
   left: 0;
   right: 0;
@@ -151,17 +155,18 @@
 }
 
 .home-carousel.swiper-container {
-  margin-left: 45%;
   position: absolute;
-  top: 15%;
-  border-radius: 0px 200px 200px 0px;
+  top: 0;
+  right: 0;
   z-index: 1000;
+  width: 55%;
+  height: 100%;
 }
 
 .home-carousel__slide {
-  border-radius: 250px 0px 0px 250px;
-  width: 540px;
-  height: 75vh;
+  border-radius: 450px 0px 0px 450px;
+  width: 100%;
+  height: 100%;
 }
 
 .home-carousel__slide-first {
