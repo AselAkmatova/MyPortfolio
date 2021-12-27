@@ -1,28 +1,48 @@
 import { Animated } from "react-animated-css";
-import image from "../images/main.jpg";
+import file from "../images/Резюме_Асель Акматова.pdf";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import "swiper/components/effect-fade/effect-fade.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import SwiperCore, { Autoplay, EffectFade } from "swiper";
+SwiperCore.use([EffectFade, Autoplay]);
 
 export default function Home() {
   return (
     <>
       <section className="home">
-        <article className="home-main">
-          <img className="home-main__image" src={image} alt="keyboard" />
-          <div className="home-main__frame">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </article>
-        <div className="home-text">
+        <div className="home-cover"></div>
+        <div className="home-info">
           <Animated animationIn="slideInLeft" isVisible={true}>
-            <h1 className="home-text__title">Asel AKMATOVA</h1>
+            <h1 className="home-info__title">Asel AKMATOVA</h1>
           </Animated>
           <Animated animationIn="slideInRight" isVisible={true}>
-            <h3 className="home-text__subtitle">Front-End Intern</h3>
+            <h3 className="home-info__subtitle">Front-End Intern</h3>
           </Animated>
+          <a href={file} download className="home-info__btn">
+            Download CV
+          </a>
         </div>
+        <Swiper
+          className="home-carousel"
+          effect={"fade"}
+          autoplay={true}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        >
+          <SwiperSlide>
+            <div className="home-carousel__slide home-carousel__slide-first"></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-carousel__slide home-carousel__slide-second"></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-carousel__slide home-carousel__slide-third"></div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </>
   );

@@ -4,7 +4,6 @@ import "swiper/swiper.min.css";
 import "swiper/components/effect-cube/effect-cube.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import SwiperCore, { Autoplay, EffectCube } from "swiper";
-import file from "../images/Резюме_Асель Акматова.pdf";
 import ScrollAnimation from "react-animate-on-scroll";
 SwiperCore.use([EffectCube, Autoplay]);
 
@@ -71,9 +70,6 @@ export default function About() {
                 className="personal-info__item"
               >
                 <b> Tel:</b> +996550627760
-              </a>
-              <a href={file} download className="personal-info__btn">
-                Download CV
               </a>
             </div>
           </Animated>

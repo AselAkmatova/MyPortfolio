@@ -3,7 +3,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
 
 * {
-  --main-color: #5f0216;
+  --main-color: #590d22;
+  --main-light-color: #800f2f;
   --hl-color: #febe27;
   --text-color: #fff;
   margin: 0;
@@ -72,81 +73,112 @@
 /*****************************HOME*************************/
 
 .home {
-  padding-top: 50px;
+  padding-top: 20px;
   min-width: 100%;
   min-height: calc(100vh - 70px);
   background-color: var(--main-color);
 }
 
-.home-main {
-  width: 60%;
-  height: 70vh;
-  margin: 0 auto 20px;
-  position: relative;
-  line-height: 0;
+.home-cover {
+  width: 50%;
+  height: 75vh;
+  margin-left: 15%;
+  background-color: var(--main-light-color);
 }
 
-.home-main__image {
-  width: 100%;
-  height: 100%;
-}
-
-.home-main__frame {
+.home-info {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--main-color);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  mix-blend-mode: darken;
+  z-index: 10000;
+  top: 45%;
+  left: 25%;
 }
 
-.home-main__frame div {
-  background-color: var(--text-color);
-  transition: transform 2s;
-  -webkit-transition: transform 2s;
-}
-
-.home-main__frame div:nth-of-type(2) {
-  grid-column: 2/4;
-}
-
-.home-main__frame div:hover {
-  transform: scale(0.8);
-  -webkit-transform: scale(0.8);
-  cursor: pointer;
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-}
-
-.home-main__frame div:nth-of-type(2) {
-  grid-column: 2/4;
-}
-
-.home-text {
-  position: absolute;
-  z-index: 4000;
-  background-color: rgba(82, 3, 3, 0.836);
-  top: 40%;
-  left: 34%;
-  padding: 50px 0;
-  width: 35%;
-}
-
-.home-text__title {
+.home-info__title {
   font-family: "Playfair Display", sans-serif;
-  text-align: center;
   font-size: 55px;
+  color: var(--text-color);
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.home-text__subtitle {
+.home-info__subtitle {
+  font-size: 28px;
+  color: var(--text-color);
+  margin-bottom: 35px;
+}
+
+.home-info__btn {
+  text-decoration: none;
   text-align: center;
-  font-size: 32px;
-  color: var(--hl-color);
+  font-weight: bold;
+  font-size: 18px;
+  width: 165px;
+  padding: 10px 0;
+  display: block;
+  background-color: var(--hl-color);
+  color: #000;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
+.home-info__btn:hover {
+  color: #000;
+}
+
+.home-info__btn::after {
+  content: "";
+  background: var(--text-color);
+  position: absolute;
+  z-index: -1;
+  display: block;
+  transition: all 0.35s;
+}
+.home-info__btn:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+
+.home-info__btn::after {
+  left: 0;
+  right: 0;
+  top: -100%;
+  bottom: 100%;
+}
+
+.home-carousel.swiper-container {
+  margin-left: 45%;
+  position: absolute;
+  top: 15%;
+  border-radius: 0px 200px 200px 0px;
+  z-index: 1000;
+}
+
+.home-carousel__slide {
+  border-radius: 250px 0px 0px 250px;
+  width: 540px;
+  height: 75vh;
+}
+
+.home-carousel__slide-first {
+  background-image: url("../images/main.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.home-carousel__slide-second {
+  background-image: url("../images/main_2.jpg");
+  background-size: cover;
+}
+.home-carousel__slide-third {
+  background-image: url("../images/main_3.jpg");
+  background-size: cover;
+  background-position: center;
+}
 /*************************ABOUT*******************************/
 
 .about {
@@ -173,11 +205,11 @@
   margin-top: 50px;
   justify-content: space-between;
 }
-
+/* 
 .swiper-container.swiper-container-cube {
   width: 450px;
   margin-left: 100px;
-}
+} */
 
 .personal-info {
   margin-right: 200px;
@@ -203,24 +235,6 @@ a.personal-info__item:hover {
 
 .personal-info__item b {
   color: var(--hl-color);
-}
-
-.personal-info__btn {
-  text-decoration: none;
-  margin-top: 25px;
-  padding: 10px 15px;
-  align-self: center;
-  border: 2px solid var(--hl-color);
-  color: var(--hl-color);
-  font-weight: bold;
-}
-
-.personal-info__btn:hover {
-  background-color: var(--hl-color);
-  color: #000;
-  transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
-  border-radius: 50px;
 }
 
 .about-middle,
