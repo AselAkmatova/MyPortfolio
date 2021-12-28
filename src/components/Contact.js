@@ -1,4 +1,10 @@
-import { Facebook, Telegram, Whatsapp, Github } from "react-bootstrap-icons";
+import {
+  Facebook,
+  Telegram,
+  Whatsapp,
+  Github,
+  Check2Circle,
+} from "react-bootstrap-icons";
 import { Form } from "react-bootstrap";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -35,8 +41,15 @@ export default function Contact() {
     <>
       <section className="contact">
         <Animated animationIn="zoomIn" isVisible={true}>
-          <h2 className="contact__title">Contact me</h2>
+          {!messageAccepted && <h2 className="contact__title">Contact me</h2>}
         </Animated>
+        {messageAccepted && (
+          <div className="message-success">
+            <Check2Circle size={55} color="#febe27" />
+            <h3>Thank you!</h3>
+            <p>Your message has been sent</p>
+          </div>
+        )}
         <Form
           className="contact__form"
           noValidate

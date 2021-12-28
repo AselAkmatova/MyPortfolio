@@ -545,6 +545,7 @@ progress::-webkit-progress-value {
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 5px;
+  border: 2px solid var(--hl-color);
 }
 
 .form__btn:hover {
@@ -563,6 +564,18 @@ progress::-webkit-progress-value {
   gap: 50px;
 }
 
-.contact svg:hover {
+.contact__icons svg:hover {
   fill: var(--hl-color);
+}
+
+.message-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.message-success > h3 {
+  margin-top: 20px;
 }
