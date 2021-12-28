@@ -11,39 +11,45 @@ export default function About() {
   return (
     <>
       <section className="about">
-        <Animated animationIn="zoomIn" isVisible={true}>
-          <h1 className="about__title">About me</h1>
-        </Animated>
         <article className="about-top">
           <Animated animationIn="slideInLeft" isVisible={true}>
-            <Swiper
-              effect={"cube"}
-              autoplay={true}
-              loop={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-            >
-              <SwiperSlide>
-                <img
-                  width="450"
-                  src="https://media.istockphoto.com/photos/computer-programmer-working-on-laptop-picture-id1265176772?b=1&k=20&m=1265176772&s=170667a&w=0&h=IHFnvxa3kvVTuZcEfPpCSGIFA_gNT7dIlGDR7eD2cFI="
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  width="450"
-                  src="https://media.istockphoto.com/photos/woman-using-covid19-lockdown-to-finally-finish-coding-for-a-new-picture-id1280720394?b=1&k=20&m=1280720394&s=170667a&w=0&h=eRUffvpLTljTivBkS6YMa_5RIJjOoijyEcL6KbgCp8A="
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  width="450"
-                  src="https://media.istockphoto.com/photos/getting-lost-in-the-code-picture-id1164885329?b=1&k=20&m=1164885329&s=170667a&w=0&h=LrCkNBqRmAzNtUCysJsJVXktCfwNz8iKDOwgg_eRQ-g="
-                />
-              </SwiperSlide>
-            </Swiper>
+            <svg width="450" height="300">
+              <defs>
+                <mask id="mask" x="0" y="0" width="450" height="300">
+                  <rect x="0" y="0" width="450" height="300" fill="#fff" />
+                  <text x="50" text-anchor="middle" y="200" dy="0">
+                    A
+                  </text>
+                  <text x="100" text-anchor="middle" y="200" dy="0">
+                    B
+                  </text>
+                  <text x="150" text-anchor="middle" y="200" dy="0">
+                    O
+                  </text>
+                  <text x="200" text-anchor="middle" y="200" dy="0">
+                    U
+                  </text>
+                  <text x="250" text-anchor="middle" y="200" dy="0">
+                    T
+                  </text>
+                  <text x="300" text-anchor="middle" y="300" dy="0">
+                    M
+                  </text>
+                  <text x="350" text-anchor="middle" y="300" dy="0">
+                    E
+                  </text>
+                </mask>
+              </defs>
+              <rect
+                x="0"
+                y="0"
+                width="450"
+                height="300"
+                mask="url(#mask)"
+                fill-opacity="1"
+                fill="#febe27"
+              />
+            </svg>
           </Animated>
           <Animated animationIn="slideInRight" isVisible={true}>
             <div className="about-top__personal-info personal-info">

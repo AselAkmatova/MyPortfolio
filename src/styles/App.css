@@ -205,19 +205,41 @@
 }
 
 .about-top {
-  width: 100%;
+  width: 70%;
   display: flex;
-  margin-top: 50px;
+  margin: 50px auto 0;
   justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--main-light-color);
+  padding-right: 60px;
+  border-radius: 250px 0 0 0;
 }
-/* 
-.swiper-container.swiper-container-cube {
+
+svg {
+  background: url("https://i.ytimg.com/vi/MlCODNJpJ84/maxresdefault.jpg");
+  background-size: cover;
   width: 450px;
-  margin-left: 100px;
-} */
+  height: auto;
+  display: block;
+  border-radius: 250px 0 0 0;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+text {
+  font-size: 85px;
+  transition: font-size 0.4s ease-out;
+  font-weight: bold;
+}
+
+svg:hover text {
+  transition: font-size 0.4s ease-in;
+  font-size: 1700px;
+}
 
 .personal-info {
-  margin-right: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -245,9 +267,11 @@ a.personal-info__item:hover {
 .about-middle,
 .about-bottom {
   width: 70%;
-  margin: 100px auto 50px;
+  margin: 0 auto;
+  padding: 70px;
   display: flex;
   justify-content: space-between;
+  background-color: var(--main-light-color);
 }
 
 .education__subtitle,
