@@ -217,7 +217,7 @@
   border-radius: 250px 0 0 0;
 }
 
-svg {
+.about svg {
   background: url("https://i.ytimg.com/vi/MlCODNJpJ84/maxresdefault.jpg");
   background-size: cover;
   width: 450px;
@@ -236,7 +236,7 @@ text {
   font-weight: bold;
 }
 
-svg:hover text {
+.about svg:hover text {
   transition: font-size 0.4s ease-in;
   font-size: 1700px;
 }

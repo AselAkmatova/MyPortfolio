@@ -16,7 +16,7 @@
     padding: 0 45px 50px 0;
   }
 
-  svg {
+  .about svg {
     width: 380px;
     height: 300px;
   }
@@ -32,16 +32,6 @@
   }
 
   /****************************PORTFOLIO**************************/
-
-  .card:hover .card__title {
-    font-size: 22px;
-    left: 25%;
-  }
-
-  .card:hover .card__btn {
-    padding: 5px 10px;
-    left: 28%;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
@@ -84,8 +74,8 @@
     gap: 50px;
   }
 
-  svg,
-  rect {
+  .about svg,
+  .about rect {
     width: 565px;
     height: 250px;
   }
@@ -96,16 +86,8 @@
 
   /****************************PORTFOLIO**************************/
 
-  .card:hover .card__title {
-    font-size: 22px;
-  }
-
-  .card:hover .card__btn {
-    padding: 5px 10px;
-  }
-
   .card,
-  .card:hover::before {
+  .card__info {
     width: 250px;
     height: 250px;
   }
@@ -168,8 +150,8 @@
     gap: 50px;
   }
 
-  svg,
-  rect {
+  .about svg,
+  .about rect {
     width: 400px;
     height: 250px;
   }
@@ -183,19 +165,25 @@
     padding: 50px 30px;
   }
 
-  .card:hover .card__title {
+  .card,
+  .card__info {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card__title {
     font-size: 20px;
   }
 
-  .card:hover .card__btn {
-    padding: 5px 10px;
-    left: 20%;
+  .card__btn {
+    width: 125px;
+    padding: 5px;
   }
 
-  .card,
-  .card:hover::before {
-    width: 200px;
-    height: 200px;
+  .card__btn::before {
+    font-size: 25px;
+    width: 15px;
+    right: 5px;
   }
 
   .save-the-ales {
@@ -300,8 +288,8 @@
     border-radius: 200px 0 0 0;
   }
 
-  svg,
-  rect {
+  .about svg,
+  .about rect {
     width: 290px;
     height: 200px;
   }
@@ -315,25 +303,30 @@
     padding: 20px;
   }
 
-  .card:hover .card__title {
-    font-size: 20px;
-    left: 10%;
+  .card__title,
+  .card__text {
+    font-size: 14px;
   }
-
-  .card:hover .card__text {
-    left: 28%;
-  }
-
-  .card:hover .card__btn {
-    padding: 5px 10px;
-    left: 16%;
+  .card__btn {
+    width: 110px;
+    padding: 5px;
     font-size: 14px;
   }
 
+  .card__btn::before {
+    font-size: 20px;
+    width: 10px;
+    right: 5px;
+  }
+
   .card,
-  .card:hover::before {
+  .card__info {
     width: 170px;
     height: 170px;
+  }
+
+  .card__btn::before {
+    font-size: 15px;
   }
 
   .save-the-ales {
