@@ -452,11 +452,13 @@ progress::-webkit-progress-value {
   margin: 0 auto 15px;
 }
 
-.mySwiper,
 .mySwiper {
   width: 60%;
   height: 10vh;
   margin: 0 auto 15px;
+}
+.mySwiper:hover {
+  cursor: pointer;
 }
 
 .slider-main__slide-one,

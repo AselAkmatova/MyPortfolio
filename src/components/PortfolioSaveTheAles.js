@@ -1,9 +1,3 @@
-import image1 from "../images/saveales-1.png";
-import image2 from "../images/saveales-2.png";
-import image3 from "../images/saveales-3.png";
-import image4 from "../images/saveales-4.png";
-import image5 from "../images/saveales-5.png";
-import image6 from "../images/saveales-6.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
@@ -53,6 +47,7 @@ export default function PortfolioSaveTheAles() {
           <a
             className="savetheales-text__link"
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/AselAkmatova/SaveTheAles-2021"
           >
             GitHub

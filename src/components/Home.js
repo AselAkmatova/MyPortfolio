@@ -28,7 +28,6 @@ export default function Home() {
           <Swiper
             className="home-carousel"
             effect={"fade"}
-            autoplay={true}
             loop={true}
             autoplay={{
               delay: 2500,

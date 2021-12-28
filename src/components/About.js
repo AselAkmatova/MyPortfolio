@@ -11,25 +11,25 @@ export default function About() {
               <defs>
                 <mask id="mask" x="0" y="0" width="450" height="300">
                   <rect x="0" y="0" width="450" height="300" fill="#fff" />
-                  <text x="15%" text-anchor="middle" y="67%" dy="0">
+                  <text x="15%" textAnchor="middle" y="67%" dy="0">
                     A
                   </text>
-                  <text x="27%" text-anchor="middle" y="67%" dy="0">
+                  <text x="27%" textAnchor="middle" y="67%" dy="0">
                     B
                   </text>
-                  <text x="39%" text-anchor="middle" y="67%" dy="0">
+                  <text x="39%" textAnchor="middle" y="67%" dy="0">
                     O
                   </text>
-                  <text x="52%" text-anchor="middle" y="67%" dy="0">
+                  <text x="52%" textAnchor="middle" y="67%" dy="0">
                     U
                   </text>
-                  <text x="64%" text-anchor="middle" y="67%" dy="0">
+                  <text x="64%" textAnchor="middle" y="67%" dy="0">
                     T
                   </text>
-                  <text x="70%" text-anchor="middle" y="100%" dy="0">
+                  <text x="70%" textAnchor="middle" y="100%" dy="0">
                     M
                   </text>
-                  <text x="82%" text-anchor="middle" y="100%" dy="0">
+                  <text x="82%" textAnchor="middle" y="100%" dy="0">
                     E
                   </text>
                 </mask>
@@ -40,7 +40,7 @@ export default function About() {
                 width="450"
                 height="300"
                 mask="url(#mask)"
-                fill-opacity="1"
+                fillOpacity="1"
                 fill="#febe27"
               />
             </svg>
@@ -60,6 +60,7 @@ export default function About() {
               <a
                 href="mailto:aselakmatova20kb@gmail.com"
                 target="_blank"
+                rel="noreferrer"
                 className="personal-info__item"
               >
                 <b> Email:</b> aselakmatova20kb@gmail.com
@@ -67,6 +68,7 @@ export default function About() {
               <a
                 href="tel:+996550627760"
                 target="_blank"
+                rel="noreferrer"
                 className="personal-info__item"
               >
                 <b> Tel:</b> +996550627760
@@ -123,19 +125,19 @@ export default function About() {
           <ScrollAnimation animateIn="slideInLeft">
             <div className="about-bottom__coding-skills coding-skills">
               <h3 className="coding-skills__title">Coding skills</h3>
-              <label for="html5">HTML5</label>
+              <label htmlFor="html5">HTML5</label>
               <progress id="html5" max="100" value="75">
                 75%
               </progress>
-              <label for="css3">CSS3</label>
+              <label htmlFor="css3">CSS3</label>
               <progress id="css3" max="100" value="70">
                 70%
               </progress>
-              <label for="javascript">JavaScript</label>
+              <label htmlFor="javascript">JavaScript</label>
               <progress id="javascript" max="100" value="50">
                 50%
               </progress>
-              <label for="react">React</label>
+              <label htmlFor="react">React</label>
               <progress id="react" max="100" value="60">
                 60%
               </progress>
@@ -144,19 +146,19 @@ export default function About() {
           <ScrollAnimation animateIn="slideInRight">
             <div className="about-bottom__language-skills language-skills">
               <h3 className="language-skills__title">language skills</h3>
-              <label for="kyrgyz">Kyrgyz</label>
+              <label htmlFor="kyrgyz">Kyrgyz</label>
               <progress id="kyrgyz" max="100" value="100">
                 100%
               </progress>
-              <label for="russian">Russian</label>
+              <label htmlFor="russian">Russian</label>
               <progress id="russian" max="100" value="100">
                 100%
               </progress>
-              <label for="english">English</label>
+              <label htmlFor="english">English</label>
               <progress id="english" max="100" value="75">
                 75%
               </progress>
-              <label for="french">French</label>
+              <label htmlFor="french">French</label>
               <progress id="french" max="100" value="85">
                 85%
               </progress>

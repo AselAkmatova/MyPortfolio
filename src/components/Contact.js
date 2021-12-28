@@ -95,16 +95,32 @@ export default function Contact() {
         </Form>
         <Animated animationIn="slideInLeft" isVisible={true}>
           <div className="contact__icons">
-            <a href="https://www.facebook.com/asel.akmatova/" target="_blank">
+            <a
+              href="https://www.facebook.com/asel.akmatova/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Facebook size="35" color="white" />
             </a>
-            <a href="https://wa.me/+996550627760" target="_blank">
+            <a
+              href="https://wa.me/+996550627760"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Whatsapp size="35" color="white" />
             </a>
-            <a href="https://telegram.me/asel_akmatova" target="_blank">
+            <a
+              href="https://telegram.me/asel_akmatova"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Telegram size="35" color="white" />
             </a>
-            <a href="https://github.com/AselAkmatova" target="_blank">
+            <a
+              href="https://github.com/AselAkmatova"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Github size="35" color="white" />
             </a>
           </div>
