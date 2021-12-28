@@ -2,6 +2,8 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
 
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css");
+
 * {
   --main-color: #590d22;
   --main-light-color: #800f2f;
@@ -357,20 +359,81 @@ progress::-webkit-progress-value {
   transform: scale(0.9);
 }
 
-/* .card:hover {
+.card:hover {
   transform: scale(1.1) !important;
-} */
-
-.card-info {
-  display: none;
 }
 
-.card:hover .card-info {
-  display: block;
+.card__info {
+  display: none;
   width: 300px;
   height: 300px;
   background-color: rgba(241, 214, 214, 0.904);
   border-radius: 5px;
+}
+
+.card:hover .card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50000;
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--main-light-color);
+}
+
+.card__text {
+  color: var(--main-light-color);
+  font-weight: bold;
+}
+
+.card__btn {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: var(--hl-color);
+  padding: 10px 0px;
+  width: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s linear 0s;
+  margin-top: 20px;
+}
+
+.card__btn:before {
+  content: "→";
+  font-size: 30px;
+  position: absolute;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+}
+
+.card__btn:hover {
+  text-indent: -20px;
+  color: #000;
+}
+
+.card__btn:hover:before {
+  opacity: 1;
+  text-indent: 0px;
 }
 
 /*************SAVE_THE_ALES******************/

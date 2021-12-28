@@ -13,41 +13,50 @@ export default function Portfolio() {
         <Animated animationIn="zoomInUp" isVisible={true}>
           <div className="portfolio__card card">
             <img className="card__image" src={image1} alt="beer" />
-          </div>
-          <div className="card-info">
-            <h3 className="card__title">Save The Ales</h3>
-            <span className="card__text">React JS </span>
-            <Link className="card__btn" to="/portfolio/savetheales">
-              Learn more
-            </Link>
+            <div className="card__info">
+              <h3 className="card__title">Save The Ales</h3>
+              <span className="card__text">React JS </span>
+              <Link className="card__btn" to="/portfolio/savetheales">
+                Learn more
+              </Link>
+            </div>
           </div>
         </Animated>
+
         <Animated animationIn="zoomInUp" isVisible={true}>
           <div className="portfolio__card card">
             <img className="card__image" src={image2} alt="coming soon" />
-            <h3 className="card__title">Coming Soon</h3>
-            <span className="card__text">Not yet </span>
+            <div className="card__info">
+              <h3 className="card__title">Coming Soon</h3>
+              <span className="card__text">Not yet </span>
+            </div>
           </div>
         </Animated>
         <Animated animationIn="zoomInUp" isVisible={true}>
           <div className="portfolio__card card">
             <img className="card__image" src={image3} alt="coming soon" />
-            <h3 className="card__title">Coming Soon</h3>
-            <span className="card__text">Not yet </span>
+            <div className="card__info">
+              <h3 className="card__title">Coming Soon</h3>
+              <span className="card__text">Not yet </span>
+            </div>
           </div>
         </Animated>
         <Animated animationIn="zoomInUp" isVisible={true}>
           <div className="portfolio__card card">
             <img className="card__image" src={image4} alt="coming soon" />
-            <h3 className="card__title">Coming Soon</h3>
-            <span className="card__text">Not yet </span>
+            <div className="card__info">
+              <h3 className="card__title">Coming Soon</h3>
+              <span className="card__text">Not yet </span>
+            </div>
           </div>
         </Animated>
         <Animated animationIn="zoomInUp" isVisible={true}>
           <div className="portfolio__card card">
             <img className="card__image" src={image5} alt="coming soon" />
-            <h3 className="card__title">Coming Soon</h3>
-            <span className="card__text">Not yet </span>
+            <div className="card__info">
+              <h3 className="card__title">Coming Soon</h3>
+              <span className="card__text">Not yet </span>
+            </div>
           </div>
         </Animated>
       </section>
