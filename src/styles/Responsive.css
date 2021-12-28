@@ -30,8 +30,6 @@
     width: 80%;
     padding: 50px 45px;
   }
-
-  /****************************PORTFOLIO**************************/
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
@@ -92,15 +90,15 @@
     height: 250px;
   }
 
-  .save-the-ales .swiper-container,
-  .save-the-ales .swiper-slide,
-  .save-the-ales .swiper-slide-active {
+  .mySwiper2,
+  .mySwiper2 > .swiper-container,
+  .mySwiper {
     width: 70%;
   }
 
-  .save-the-ales img {
-    width: 100%;
-    height: 100%;
+  .savetheales-text {
+    width: 65%;
+    font-size: 16px;
   }
 }
 
@@ -186,19 +184,21 @@
     right: 5px;
   }
 
-  .save-the-ales {
+  .mySwiper2,
+  .mySwiper2 > .swiper-container,
+  .mySwiper {
+    width: 100%;
+  }
+
+  .slider-main__slide,
+  .slider-small__slide {
+    background-size: cover;
+    background-position-x: 10%;
+  }
+
+  .savetheales-text {
+    width: 90%;
     font-size: 16px;
-  }
-
-  .save-the-ales .swiper-container,
-  .save-the-ales .swiper-slide,
-  .save-the-ales .swiper-slide-active {
-    width: 100%;
-  }
-
-  .save-the-ales img {
-    width: 100%;
-    height: 100%;
   }
 
   .contact__icons {
@@ -329,32 +329,40 @@
     font-size: 15px;
   }
 
-  .save-the-ales {
-    padding: 20px 0;
+  .savetheales {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 15px;
   }
 
-  .save-the-ales .swiper-container,
-  .save-the-ales .swiper-slide,
-  .save-the-ales .swiper-slide-active {
+  .savetheales::after {
+    content: "Save The Ales";
+    color: var(--hl-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+
+  .mySwiper2,
+  .mySwiper2 > .swiper-container {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slider-main__slide {
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
   }
-  .save-the-ales__text {
+
+  .mySwiper {
+    display: none;
+  }
+
+  .savetheales-text {
+    width: 80%;
     font-size: 14px;
-    padding: 10px 10px 0;
-  }
-
-  .save-the-ales__title {
-    font-size: 20px;
-  }
-
-  .save-the-ales__btn {
-    font-size: 16px;
-    width: 150px;
-  }
-
-  .save-the-ales img {
-    width: 100%;
-    height: 100%;
   }
 
   .contact {

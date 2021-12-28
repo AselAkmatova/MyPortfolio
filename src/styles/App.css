@@ -489,19 +489,16 @@ progress::-webkit-progress-value {
   background-size: cover;
 }
 
-.savetheales-info {
-  width: 55%;
-  margin: 0 auto;
-}
-
-.savetheales-info__text {
+.savetheales-text {
   text-align: center;
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 2em;
+  width: 55%;
+  margin: 0 auto;
 }
 
-.savetheales-info__link {
+.savetheales-text__link {
   text-decoration: none;
   transition: background-size 0.2s;
   color: var(--hl-color);

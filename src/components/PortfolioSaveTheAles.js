@@ -45,20 +45,19 @@ export default function PortfolioSaveTheAles() {
             <SwiperSlide className="slider-small__slide slider-small__slide-five"></SwiperSlide>
           </Swiper>
         </div>
-        <div className="savetheales-info">
-          <p className="savetheales-info__text">
-            This is an online food ordering app made for the bar
-            <b> Save The Ales.</b> Realized at the end of IT-Academy course. You
-            can check it on{" "}
-            <a
-              className="savetheales-info__link"
-              target="_blank"
-              href="https://github.com/AselAkmatova/SaveTheAles-2021"
-            >
-              GitHub
-            </a>
-          </p>
-        </div>
+
+        <p className="savetheales-text">
+          This is an online food ordering app made for the bar
+          <b> Save The Ales.</b> Realized at the end of IT-Academy course. You
+          can check it on{" "}
+          <a
+            className="savetheales-text__link"
+            target="_blank"
+            href="https://github.com/AselAkmatova/SaveTheAles-2021"
+          >
+            GitHub
+          </a>
+        </p>
       </article>
     </>
   );
