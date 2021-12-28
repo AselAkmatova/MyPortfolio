@@ -357,56 +357,16 @@ progress::-webkit-progress-value {
   transform: scale(0.9);
 }
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.1) !important;
-}
+} */
 
-.card__title,
-.card__btn,
-.card__text {
+.card-info {
   display: none;
 }
 
-.card:hover .card__title {
+.card:hover .card-info {
   display: block;
-  position: absolute;
-  top: 20%;
-  left: 18%;
-  color: #000;
-}
-
-.card:hover .card__text {
-  display: block;
-  position: absolute;
-  top: 35%;
-  left: 37%;
-  color: var(--main-color);
-  font-weight: bold;
-}
-
-.card:hover .card__btn {
-  display: block;
-  position: absolute;
-  top: 55%;
-  left: 23%;
-  padding: 10px 20px;
-  color: var(--main-color);
-  font-weight: bold;
-  border: 2px solid var(--main-color);
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.card:hover .card__btn:hover {
-  background-color: var(--hl-color);
-  color: #000;
-  border: 2px solid var(--hl-color);
-  cursor: pointer;
-}
-
-.card:hover::before {
-  content: "";
-  position: absolute;
   width: 300px;
   height: 300px;
   background-color: rgba(241, 214, 214, 0.904);

@@ -13,6 +13,8 @@ export default function Portfolio() {
         <Animated animationIn="zoomInUp" isVisible={true}>
           <div className="portfolio__card card">
             <img className="card__image" src={image1} alt="beer" />
+          </div>
+          <div className="card-info">
             <h3 className="card__title">Save The Ales</h3>
             <span className="card__text">React JS </span>
             <Link className="card__btn" to="/portfolio/savetheales">
