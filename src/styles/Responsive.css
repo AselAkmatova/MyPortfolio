@@ -10,21 +10,25 @@
   }
 
   /*************************ABOUT*******************************/
-  .about {
-    padding: 50px 20px;
-  }
 
-  .swiper-container.swiper-container-cube {
-    width: 400px;
-  }
-
-  .personal-info {
-    margin-right: 100px;
-  }
-
-  .about-middle,
-  .about-bottom {
+  .about-top {
     width: 80%;
+    padding: 0 45px 50px 0;
+  }
+
+  svg {
+    width: 380px;
+    height: 300px;
+  }
+
+  text {
+    font-size: 75px;
+  }
+
+  .about-bottom,
+  .about-middle {
+    width: 80%;
+    padding: 50px 45px;
   }
 
   /****************************PORTFOLIO**************************/
@@ -67,45 +71,27 @@
   /*************************ABOUT*******************************/
   .about {
     padding: 50px 30px;
-    font-size: 15px;
-    font-weight: normal;
   }
 
-  .swiper-container.swiper-container-cube {
-    width: 350px;
-    margin-left: 20px;
-  }
-  .swiper-container img {
-    width: 350px;
-  }
-
-  .personal-info {
-    margin-right: 50px;
-  }
-
-  .education__subtitle,
-  .education__item,
-  .experience__subtitle,
-  .experience__item {
-    padding-left: 5px;
-  }
-
-  .about-middle {
-    width: 90%;
-  }
-
-  .education {
-    margin-left: 10px;
-  }
-
+  .about-top,
+  .about-middle,
   .about-bottom {
-    width: 90%;
+    width: 565px;
+    padding: 0 0 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
   }
 
-  .education__subtitle::before,
-  .experience__subtitle::before {
-    left: -50px;
-    font-size: 15px;
+  svg,
+  rect {
+    width: 565px;
+    height: 250px;
+  }
+
+  text {
+    font-size: 90px;
   }
 
   /****************************PORTFOLIO**************************/
@@ -166,48 +152,31 @@
   }
 
   /*************************ABOUT*******************************/
+
   .about {
     padding: 50px 30px;
-    font-size: 15px;
-    font-weight: normal;
-  }
-
-  .swiper-container.swiper-container-cube {
-    width: 300px;
-    margin: 0;
-  }
-
-  .swiper-container img {
-    width: 300px;
   }
 
   .about-top,
   .about-middle,
   .about-bottom {
+    width: 400px;
+    padding: 0 0 50px;
     flex-direction: column;
-    gap: 25px;
-    width: 70%;
+    justify-content: center;
     align-items: center;
-    margin: 50px auto;
+    gap: 50px;
   }
 
-  .personal-info {
-    margin: 0;
+  svg,
+  rect {
+    width: 400px;
+    height: 250px;
   }
 
-  .education__subtitle,
-  .education__item,
-  .experience__subtitle,
-  .experience__item {
-    padding-left: 5px;
+  text {
+    font-size: 80px;
   }
-
-  .education__subtitle::before,
-  .experience__subtitle::before {
-    left: -50px;
-    font-size: 15px;
-  }
-
   /****************************PORTFOLIO**************************/
 
   .portfolio {
@@ -295,52 +264,51 @@
   }
 
   /*************************ABOUT*******************************/
+
   .about {
-    padding: 20px;
-    font-size: 15px;
-    font-weight: normal;
-  }
-
-  .swiper-container.swiper-container-cube {
-    width: 300px;
-    margin: 0;
-  }
-
-  .swiper-container img {
-    width: 300px;
-  }
-
-  .about-top,
-  .about-middle,
-  .about-bottom {
-    flex-direction: column;
-    gap: 25px;
-    width: 70%;
-    align-items: center;
-    margin: 50px auto;
-  }
-
-  .personal-info {
-    margin: 0;
+    padding: 10px 0;
+    font-size: 14px;
   }
 
   .about h3 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .education__subtitle,
   .education__item,
   .experience__subtitle,
   .experience__item {
-    padding-left: 5px;
+    border: none;
   }
 
-  .education__subtitle::before,
-  .experience__subtitle::before {
-    left: -50px;
-    font-size: 15px;
+  progress {
+    width: 250px;
   }
 
+  .about-top,
+  .about-middle,
+  .about-bottom {
+    width: 290px;
+    padding: 0 0 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .about-top {
+    border-radius: 200px 0 0 0;
+  }
+
+  svg,
+  rect {
+    width: 290px;
+    height: 200px;
+  }
+
+  text {
+    font-size: 55px;
+  }
   /****************************PORTFOLIO**************************/
 
   .portfolio {

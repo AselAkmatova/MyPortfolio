@@ -1,11 +1,5 @@
 import { Animated } from "react-animated-css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.min.css";
-import "swiper/components/effect-cube/effect-cube.min.css";
-import "swiper/components/pagination/pagination.min.css";
-import SwiperCore, { Autoplay, EffectCube } from "swiper";
 import ScrollAnimation from "react-animate-on-scroll";
-SwiperCore.use([EffectCube, Autoplay]);
 
 export default function About() {
   return (
@@ -17,25 +11,25 @@ export default function About() {
               <defs>
                 <mask id="mask" x="0" y="0" width="450" height="300">
                   <rect x="0" y="0" width="450" height="300" fill="#fff" />
-                  <text x="50" text-anchor="middle" y="200" dy="0">
+                  <text x="15%" text-anchor="middle" y="67%" dy="0">
                     A
                   </text>
-                  <text x="100" text-anchor="middle" y="200" dy="0">
+                  <text x="27%" text-anchor="middle" y="67%" dy="0">
                     B
                   </text>
-                  <text x="150" text-anchor="middle" y="200" dy="0">
+                  <text x="39%" text-anchor="middle" y="67%" dy="0">
                     O
                   </text>
-                  <text x="200" text-anchor="middle" y="200" dy="0">
+                  <text x="52%" text-anchor="middle" y="67%" dy="0">
                     U
                   </text>
-                  <text x="250" text-anchor="middle" y="200" dy="0">
+                  <text x="64%" text-anchor="middle" y="67%" dy="0">
                     T
                   </text>
-                  <text x="300" text-anchor="middle" y="300" dy="0">
+                  <text x="70%" text-anchor="middle" y="100%" dy="0">
                     M
                   </text>
-                  <text x="350" text-anchor="middle" y="300" dy="0">
+                  <text x="82%" text-anchor="middle" y="100%" dy="0">
                     E
                   </text>
                 </mask>
@@ -87,13 +81,15 @@ export default function About() {
               <h4 className="education__subtitle education__subtitle-first">
                 Kyrgyz National University
               </h4>
+              <p className="education__item">2010-2015</p>
               <p className="education__item">Faculty of Foreign Langages</p>
               <p className="education__item">
-                Theory and Metodology of Teaching <br /> (Diploma with Honors)
+                Theory and Metodology of Teaching <br /> ( Diploma with Honors )
               </p>
               <h4 className="education__subtitle education__subtitle-second">
                 IT-Academia
               </h4>
+              <p className="education__item">October 2020- June 2021</p>
               <p className="education__item">Frontend</p>
               <p className="education__item">
                 JavaScript, React, HTML, CSS, <br />
@@ -107,6 +103,7 @@ export default function About() {
               <h4 className="experience__subtitle experience__subtitle-first">
                 LLC Travel Land
               </h4>
+              <p className="experience__item">2016-2021</p>
               <p className="experience__item">Tourism manager</p>
               <p className="experience__item">
                 Sales, product management, trainings <br /> tourism fairs
@@ -114,6 +111,7 @@ export default function About() {
               <h4 className="experience__subtitle experience__subtitle-second">
                 LLC Kyrgyz Asia
               </h4>
+              <p className="experience__item">2012-2015</p>
               <p className="experience__item">Guide-interpretor</p>
               <p className="experience__item">
                 Guideing, translation french-russian-kyrgyz
