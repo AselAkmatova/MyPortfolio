@@ -9,6 +9,7 @@ import { Form } from "react-bootstrap";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Animated } from "react-animated-css";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   let [validated, setValidated] = useState(false);
@@ -35,6 +36,12 @@ export default function Contact() {
 
     if (form2.checkValidity()) {
       setMessageAccepted(true);
+      emailjs.sendForm(
+        "my_gmail",
+        "template_xbbw1lu",
+        form2,
+        "user_TsyEUcib7ZtF7XCD50DJ2"
+      );
     }
   };
   return (
