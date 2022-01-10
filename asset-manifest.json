@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.6b697dbd.chunk.css",
-    "main.js": "/Portfolio/static/js/main.7b579756.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.7b579756.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.d0c4583b.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.d0c4583b.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.43b2f2ed.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.43b2f2ed.js.map",
     "static/css/2.3739da32.chunk.css": "/Portfolio/static/css/2.3739da32.chunk.css",
@@ -17,13 +17,13 @@
     "static/media/come-soon_2.fb6a1597.jpg": "/Portfolio/static/media/come-soon_2.fb6a1597.jpg",
     "static/media/come-soon_4.654582d6.jpg": "/Portfolio/static/media/come-soon_4.654582d6.jpg",
     "static/media/App.css": "/Portfolio/static/media/saveales-5.897eae80.png",
-    "static/media/Резюме_Асель Акматова.1f8eb333.pdf": "/Portfolio/static/media/Резюме_Асель Акматова.1f8eb333.pdf"
+    "static/media/Резюме_Асель Акматова.a92ea183.pdf": "/Portfolio/static/media/Резюме_Асель Акматова.a92ea183.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.43b2f2ed.js",
     "static/css/2.3739da32.chunk.css",
     "static/js/2.bfdf33a6.chunk.js",
     "static/css/main.6b697dbd.chunk.css",
-    "static/js/main.7b579756.chunk.js"
+    "static/js/main.d0c4583b.chunk.js"
   ]
 }
