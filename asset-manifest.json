@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.6b697dbd.chunk.css",
-    "main.js": "/Portfolio/static/js/main.d0c4583b.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.d0c4583b.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.fac6a468.chunk.css",
+    "main.js": "/Portfolio/static/js/main.b75d76e2.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.b75d76e2.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.43b2f2ed.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.43b2f2ed.js.map",
-    "static/css/2.3739da32.chunk.css": "/Portfolio/static/css/2.3739da32.chunk.css",
-    "static/js/2.bfdf33a6.chunk.js": "/Portfolio/static/js/2.bfdf33a6.chunk.js",
-    "static/js/2.bfdf33a6.chunk.js.map": "/Portfolio/static/js/2.bfdf33a6.chunk.js.map",
+    "static/css/2.383c0125.chunk.css": "/Portfolio/static/css/2.383c0125.chunk.css",
+    "static/js/2.04ec23e8.chunk.js": "/Portfolio/static/js/2.04ec23e8.chunk.js",
+    "static/js/2.04ec23e8.chunk.js.map": "/Portfolio/static/js/2.04ec23e8.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/2.3739da32.chunk.css.map": "/Portfolio/static/css/2.3739da32.chunk.css.map",
-    "static/css/main.6b697dbd.chunk.css.map": "/Portfolio/static/css/main.6b697dbd.chunk.css.map",
-    "static/js/2.bfdf33a6.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.bfdf33a6.chunk.js.LICENSE.txt",
-    "static/media/beer.75e074da.jpg": "/Portfolio/static/media/beer.75e074da.jpg",
+    "static/css/2.383c0125.chunk.css.map": "/Portfolio/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.fac6a468.chunk.css.map": "/Portfolio/static/css/main.fac6a468.chunk.css.map",
+    "static/js/2.04ec23e8.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.04ec23e8.chunk.js.LICENSE.txt",
+    "static/media/Resume_Asel Akmatova.0411d059.pdf": "/Portfolio/static/media/Resume_Asel Akmatova.0411d059.pdf",
+    "static/media/Vector.92970362.png": "/Portfolio/static/media/Vector.92970362.png",
+    "static/media/beer.bdcc0a9e.jpg": "/Portfolio/static/media/beer.bdcc0a9e.jpg",
     "static/media/come-soon_1.264ccbbc.jpg": "/Portfolio/static/media/come-soon_1.264ccbbc.jpg",
     "static/media/come-soon_2.fb6a1597.jpg": "/Portfolio/static/media/come-soon_2.fb6a1597.jpg",
-    "static/media/come-soon_4.654582d6.jpg": "/Portfolio/static/media/come-soon_4.654582d6.jpg",
-    "static/media/App.css": "/Portfolio/static/media/saveales-5.897eae80.png",
-    "static/media/Резюме_Асель Акматова.a92ea183.pdf": "/Portfolio/static/media/Резюме_Асель Акматова.a92ea183.pdf"
+    "static/media/glass.38b1d9a5.png": "/Portfolio/static/media/glass.38b1d9a5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.43b2f2ed.js",
-    "static/css/2.3739da32.chunk.css",
-    "static/js/2.bfdf33a6.chunk.js",
-    "static/css/main.6b697dbd.chunk.css",
-    "static/js/main.d0c4583b.chunk.js"
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.04ec23e8.chunk.js",
+    "static/css/main.fac6a468.chunk.css",
+    "static/js/main.b75d76e2.chunk.js"
   ]
 }
