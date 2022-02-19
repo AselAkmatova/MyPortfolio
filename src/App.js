@@ -1,29 +1,35 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./styles/App.css";
-import "./styles/Responsive.css";
-import Header from "./components/Header";
+import "./styles/App.scss";
+import "./styles/Responsive.scss";
 import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import PortfolioSaveTheAles from "./components/PortfolioSaveTheAles";
 import Contact from "./components/Contact";
 
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route
-            path="/portfolio/savetheales"
-            element={<PortfolioSaveTheAles />}
-          />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
+      <div className="wrapper">
+        <header className="header">
+          <nav className="header__nav">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+        <section className="home">
+          <Home />
+        </section>
+        <section className="about" id="about">
+          <About />
+        </section>
+        <section className="portfolio" id="portfolio">
+          <Portfolio />
+        </section>
+        <section className="contact" id="contact">
+          <Contact />
+        </section>
+      </div>
     </>
   );
 }

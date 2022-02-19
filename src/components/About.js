@@ -1,171 +1,125 @@
-import { Animated } from "react-animated-css";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Award } from "react-bootstrap-icons";
 
 export default function About() {
   return (
     <>
-      <section className="about">
-        <article className="about-top">
-          <Animated animationIn="slideInLeft" isVisible={true}>
-            <svg width="450" height="300">
-              <defs>
-                <mask id="mask" x="0" y="0" width="450" height="300">
-                  <rect x="0" y="0" width="450" height="300" fill="#fff" />
-                  <text x="15%" textAnchor="middle" y="67%" dy="0">
-                    A
-                  </text>
-                  <text x="27%" textAnchor="middle" y="67%" dy="0">
-                    B
-                  </text>
-                  <text x="39%" textAnchor="middle" y="67%" dy="0">
-                    O
-                  </text>
-                  <text x="52%" textAnchor="middle" y="67%" dy="0">
-                    U
-                  </text>
-                  <text x="64%" textAnchor="middle" y="67%" dy="0">
-                    T
-                  </text>
-                  <text x="70%" textAnchor="middle" y="100%" dy="0">
-                    M
-                  </text>
-                  <text x="82%" textAnchor="middle" y="100%" dy="0">
-                    E
-                  </text>
-                </mask>
-              </defs>
-              <rect
-                x="0"
-                y="0"
-                width="450"
-                height="300"
-                mask="url(#mask)"
-                fillOpacity="1"
-                fill="#febe27"
-              />
-            </svg>
-          </Animated>
-          <Animated animationIn="slideInRight" isVisible={true}>
-            <div className="about-top__personal-info personal-info">
-              <h3 className="personal-info__title">Personal Information</h3>
-              <p className="personal-info__item">
-                <b> Name:</b> Akmatova Asel
+      <h2 className="about__title">About me</h2>
+      <div className="about__content content">
+        <ScrollAnimation animateIn="slideInLeft">
+          <div className="content__about-left-col about-left-col">
+            <div className="about-col__personal personal">
+              <h4>Personal Information</h4>
+              <p>
+                <span> Name:</span> Akmatova Asel
               </p>
-              <p className="personal-info__item">
-                <b>Age:</b> 29 Years{" "}
+              <p>
+                <span>Date od Birth:</span> 20/07/1992
               </p>
-              <p className="personal-info__item">
-                <b>Residence:</b> Bishkek, Kyrgyzstan
+              <p>
+                <span>Residence:</span> Bishkek, Kyrgyzstan
               </p>
-              <a
-                href="mailto:aselakmatova20kb@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="personal-info__item"
-              >
-                <b> Email:</b> aselakmatova20kb@gmail.com
-              </a>
-              <a
-                href="tel:+996550627760"
-                target="_blank"
-                rel="noreferrer"
-                className="personal-info__item"
-              >
-                <b> Tel:</b> +996550627760
-              </a>
-            </div>
-          </Animated>
-        </article>
-        <article className="about-middle">
-          <ScrollAnimation animateIn="slideInLeft">
-            <div className="about-middle__education education">
-              <h3 className="education__title">Education</h3>
-              <h4 className="education__subtitle education__subtitle-first">
-                Kyrgyz National University
-              </h4>
-              <p className="education__item">2010-2015</p>
-              <p className="education__item">Faculty of Foreign Langages</p>
-              <p className="education__item">
-                Theory and Metodology of Teaching <br /> ( Diploma with Honors )
-              </p>
-              <h4 className="education__subtitle education__subtitle-second">
-                IT-Academia
-              </h4>
-              <p className="education__item">October 2020- June 2021</p>
-              <p className="education__item">Frontend</p>
-              <p className="education__item">
-                JavaScript, React, HTML, CSS, <br />
-                Bootstrap, Figma, Bem, Jquery, ExpressJs
+              <p>
+                <span> Email: </span>
+                <a
+                  href="mailto:aselakmatova20kb@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="personal-info__item"
+                >
+                  aselakmatova20kb@gmail.com
+                </a>
               </p>
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="slideInRight">
-            <div className="about-middle__experience experience">
-              <h3 className="experience__title">Experience</h3>
-              <h4 className="experience__subtitle experience__subtitle-first">
-                LLC Travel Land
-              </h4>
-              <p className="experience__item">2016-2021</p>
-              <p className="experience__item">Tourism manager</p>
-              <p className="experience__item">
-                Sales, product management, trainings <br /> tourism fairs
+            <div className="about-col__experience experience">
+              <h4>Experience (last working place)</h4>
+              <h5>LLC Travel Land</h5>
+              <p>October 2016 - September 2021</p>
+              <p>Tourism manager</p>
+              <ul>
+                <li>Increased travel packages</li>
+                <li>Signed contracts with key partners from Europe</li>
+              </ul>
+            </div>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="slideInRight">
+          <div className="content__education education">
+            <h4>Education</h4>
+            <div className="education__university university">
+              <h5 className="university__title">
+                Kyrgyz National University | 2010 - 2015
+              </h5>
+              <p>Faculty of Foreign Langages</p>
+              <p>Theory and Methodology of French Language Teaching</p>
+              <p>
+                <Award size={24} color="#D00000" /> Diploma with Honors
               </p>
-              <h4 className="experience__subtitle experience__subtitle-second">
-                LLC Kyrgyz Asia
-              </h4>
-              <p className="experience__item">2012-2015</p>
-              <p className="experience__item">Guide-interpretor</p>
-              <p className="experience__item">
-                Guideing, translation french-russian-kyrgyz
+            </div>
+            <div className="education__university university">
+              <h5 className="university__title">
+                IT - Academia | October 2020 - June 2021
+              </h5>
+              <p>Frontend</p>
+              <p>
+                JavaScript, React, HTML, CSS, Bootstrap, Figma, Bem,
+                Jquery,ExpressJs
               </p>
             </div>
-          </ScrollAnimation>
-        </article>
-        <article className="about-bottom">
-          <ScrollAnimation animateIn="slideInLeft">
-            <div className="about-bottom__coding-skills coding-skills">
-              <h3 className="coding-skills__title">Coding skills</h3>
-              <label htmlFor="html5">HTML5</label>
-              <progress id="html5" max="100" value="75">
-                75%
-              </progress>
-              <label htmlFor="css3">CSS3</label>
-              <progress id="css3" max="100" value="70">
-                70%
-              </progress>
-              <label htmlFor="javascript">JavaScript</label>
-              <progress id="javascript" max="100" value="50">
-                50%
-              </progress>
-              <label htmlFor="react">React</label>
-              <progress id="react" max="100" value="60">
-                60%
-              </progress>
+            <div className="education__university university">
+              <h5 className="university__title">
+                Codify | December 2021 - February 2022
+              </h5>
+              <p>UI-UX Design</p>
+              <p>Figma, UX, UX, web design</p>
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="slideInRight">
-            <div className="about-bottom__language-skills language-skills">
-              <h3 className="language-skills__title">language skills</h3>
-              <label htmlFor="kyrgyz">Kyrgyz</label>
-              <progress id="kyrgyz" max="100" value="100">
-                100%
-              </progress>
-              <label htmlFor="russian">Russian</label>
-              <progress id="russian" max="100" value="100">
-                100%
-              </progress>
-              <label htmlFor="english">English</label>
-              <progress id="english" max="100" value="75">
-                75%
-              </progress>
-              <label htmlFor="french">French</label>
-              <progress id="french" max="100" value="85">
-                85%
-              </progress>
-            </div>
-          </ScrollAnimation>
-        </article>
-      </section>
+          </div>
+        </ScrollAnimation>
+      </div>
+      <div className="about__skills skills">
+        <ScrollAnimation animateIn="slideInLeft">
+          <div className="skills__coding coding">
+            <h4>Coding skills</h4>
+            <label htmlFor="html5">HTML5</label>
+            <progress id="html5" max="100" value="75">
+              75%
+            </progress>
+            <label htmlFor="css3">CSS3</label>
+            <progress id="css3" max="100" value="70">
+              70%
+            </progress>
+            <label htmlFor="javascript">JavaScript</label>
+            <progress id="javascript" max="100" value="50">
+              50%
+            </progress>
+            <label htmlFor="react">React</label>
+            <progress id="react" max="100" value="60">
+              60%
+            </progress>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="slideInRight">
+          <div className="skills__languages languages">
+            <h4>Language Skills</h4>
+            <label htmlFor="kyrgyz">Kyrgyz</label>
+            <progress id="kyrgyz" max="100" value="100">
+              100%
+            </progress>
+            <label htmlFor="russian">Russian</label>
+            <progress id="russian" max="100" value="100">
+              100%
+            </progress>
+            <label htmlFor="english">English</label>
+            <progress id="english" max="100" value="75">
+              75%
+            </progress>
+            <label htmlFor="french">French</label>
+            <progress id="french" max="100" value="85">
+              85%
+            </progress>
+          </div>
+        </ScrollAnimation>
+      </div>
     </>
   );
 }

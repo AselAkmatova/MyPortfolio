@@ -1,15 +1,9 @@
-import {
-  Facebook,
-  Telegram,
-  Whatsapp,
-  Github,
-  Check2Circle,
-} from "react-bootstrap-icons";
+import { Telegram, Github, Check2Circle } from "react-bootstrap-icons";
 import { Form } from "react-bootstrap";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Animated } from "react-animated-css";
 import emailjs from "emailjs-com";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Contact() {
   let [validated, setValidated] = useState(false);
@@ -44,108 +38,96 @@ export default function Contact() {
       );
     }
   };
+
   return (
     <>
-      <section className="contact">
-        <Animated animationIn="zoomIn" isVisible={true}>
-          {!messageAccepted && <h2 className="contact__title">Contact me</h2>}
-        </Animated>
-        {messageAccepted && (
-          <div className="message-success">
-            <Check2Circle size={55} color="#febe27" />
-            <h3>Thank you!</h3>
-            <p>Your message has been sent</p>
-          </div>
+      <ScrollAnimation animateIn="zoomIn">
+        {!messageAccepted && (
+          <>
+            <h2 className="contact__title">Contact me</h2>
+            <p className="contact__subtitle">Feel free to contact me :)</p>
+          </>
         )}
-        <Form
-          className="contact__form"
-          noValidate
-          validated={validated}
-          onSubmit={handleSubmit}
-          hidden={messageAccepted}
+      </ScrollAnimation>
+      {messageAccepted && (
+        <div className="message-success">
+          <Check2Circle size={55} color="#febe27" />
+          <h3>Thank you!</h3>
+          <p>Your message has been sent</p>
+        </div>
+      )}
+      <Form
+        className="contact__form"
+        noValidate
+        validated={validated}
+        onSubmit={handleSubmit}
+        hidden={messageAccepted}
+      >
+        <ScrollAnimation animateIn="slideInLeft">
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="text"
+              name="userName"
+              onChange={handleChange}
+              placeholder="Name"
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              <p className="form-alert">Please enter your name </p>
+            </Form.Control.Feedback>
+          </Form.Group>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="slideInRight">
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="email"
+              name="email"
+              onChange={handleChange}
+              placeholder="Email"
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              <p className="form-alert">Please enter your email </p>
+            </Form.Control.Feedback>
+          </Form.Group>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="slideInLeft">
+          <Form.Group className="mb-3">
+            <Form.Control
+              required
+              as="textarea"
+              name="message"
+              onChange={handleChange}
+              rows={5}
+              placeholder="Message"
+            />
+            <Form.Control.Feedback type="invalid">
+              <p className="form-alert">Please enter your message</p>
+            </Form.Control.Feedback>
+          </Form.Group>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="slideInRight">
+          <button className="form__btn" type="submit">
+            Send
+          </button>
+        </ScrollAnimation>
+      </Form>
+      <div className="contact__social">
+        <a
+          href="https://github.com/AselAkmatova"
+          target="_blank"
+          rel="noreferrer"
         >
-          <Animated animationIn="slideInLeft" isVisible={true}>
-            <Form.Group className="mb-3">
-              <Form.Control
-                type="text"
-                name="userName"
-                onChange={handleChange}
-                placeholder="Your name"
-                required
-              />
-              <Form.Control.Feedback type="invalid">
-                <p className="form-alert">Please enter your name </p>
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Animated>
-          <Animated animationIn="slideInRight" isVisible={true}>
-            <Form.Group className="mb-3">
-              <Form.Control
-                type="email"
-                name="email"
-                onChange={handleChange}
-                placeholder="Your email"
-                required
-              />
-              <Form.Control.Feedback type="invalid">
-                <p className="form-alert">Please enter your email </p>
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Animated>
-          <Animated animationIn="slideInLeft" isVisible={true}>
-            <Form.Group className="mb-3">
-              <Form.Control
-                required
-                as="textarea"
-                name="message"
-                onChange={handleChange}
-                rows={5}
-                placeholder="Your message"
-              />
-              <Form.Control.Feedback type="invalid">
-                <p className="form-alert">Please enter your message</p>
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Animated>
-          <Animated animationIn="slideInRight" isVisible={true}>
-            <button className="form__btn" type="submit">
-              Send
-            </button>
-          </Animated>
-        </Form>
-        <Animated animationIn="slideInLeft" isVisible={true}>
-          <div className="contact__icons">
-            <a
-              href="https://www.facebook.com/asel.akmatova/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Facebook size="35" color="white" />
-            </a>
-            <a
-              href="https://wa.me/+996550627760"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Whatsapp size="35" color="white" />
-            </a>
-            <a
-              href="https://telegram.me/asel_akmatova"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Telegram size="35" color="white" />
-            </a>
-            <a
-              href="https://github.com/AselAkmatova"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Github size="35" color="white" />
-            </a>
-          </div>
-        </Animated>
-      </section>
+          <Github size={32} />
+        </a>
+        <a
+          href="https://telegram.me/asel_akmatova"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Telegram size={32} />
+        </a>
+      </div>
     </>
   );
 }

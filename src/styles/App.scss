@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
+@import "../../node_modules/bourbon/core/bourbon";
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css");
+
+$main-color: #2b0412;
+$secondary-color: #f48c06;
+$accent-color: #dc2f02;
+$text-color: #f9f9f9;
+$black-color: #040610;
+
+@mixin page {
+  margin-bottom: 80px;
+  padding-top: 20px;
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: $secondary-color;
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin-bottom: 60px;
+    &__title {
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+  }
+
+  @media screen and (max-width: 605px) {
+    margin-bottom: 40px;
+    &__title {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+  }
+}
+
+@mixin button {
+  color: $text-color;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: $accent-color;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: block;
+
+  &::after {
+    content: "";
+    background: $secondary-color;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    transition: all 0.35s;
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+  }
+
+  &:hover {
+    color: #0f0e0e;
+    font-weight: 500;
+    &::after {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all 0.35s;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+  font-size: inherit;
+}
+
+body {
+  background: linear-gradient($black-color, $main-color);
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/**********************HEADER***********************/
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  &__nav {
+    a {
+      margin-right: 60px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: relative;
+      transition: 0.5s color ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $text-color;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+        color: $secondary-color;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: relative;
+        transition: 0.5s color ease;
+      }
+
+      &:after {
+        content: "";
+        height: 2px;
+        width: 0;
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        transition: 0.5s all ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background: $secondary-color;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+/***********************HOME*************************/
+.home {
+  min-height: 500px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+
+  &-content {
+    max-width: 481px;
+    &__title {
+      margin-bottom: 20px;
+      font-size: 80px;
+      color: $secondary-color;
+      font-weight: 700;
+      line-height: 100%;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+      margin-bottom: 40px;
+      font-weight: normal;
+    }
+
+    &__btn {
+      width: 190px;
+      padding: 12px 32px;
+
+      @include button();
+    }
+  }
+
+  &-glasses {
+    img {
+      top: 257px;
+      animation: rotating 8s linear infinite;
+      position: absolute;
+      z-index: 100;
+      &:first-child {
+        right: 387px;
+      }
+      &:nth-child(2) {
+        right: 266px;
+      }
+    }
+
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .home-img {
+    position: absolute;
+    top: 20px;
+    right: 55px;
+    z-index: -1;
+  }
+}
+
+/***********************ABOUT************************/
+.about {
+  @include page();
+  h4 {
+    font-size: 24px;
+    color: $accent-color;
+    margin-bottom: 25px;
+  }
+
+  h5,
+  span {
+    color: $secondary-color;
+    font-size: 18px;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    margin-bottom: 60px;
+
+    .about-left-col {
+      width: calc((100vw - 200px) / 2);
+      margin-bottom: 40px;
+      .personal {
+        a {
+          text-decoration: none;
+          color: $text-color;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .education {
+      width: calc((100vw - 200px) / 2);
+      &__university:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    .coding,
+    .languages {
+      width: calc((100vw - 200px) / 2);
+    }
+    progress {
+      background-color: $text-color;
+      width: 400px;
+      display: block;
+      margin-bottom: 20px;
+      &::-webkit-progress-bar {
+        background-color: $text-color;
+      }
+      &::-webkit-progress-value {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+/**********************PORTFOLIO*********************/
+
+.portfolio {
+  @include page();
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:hover .card {
+      transform: scale(0.9);
+    }
+
+    .card {
+      width: 20vw;
+      height: 20vw;
+      transition: 1s;
+      border-radius: 10px;
+      border-color: $main-color;
+      position: relative;
+      margin: 0 20px 20px 0;
+
+      &:hover {
+        transform: scale(1.1) !important;
+
+        .card__info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 100;
+        }
+      }
+
+      .card__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .card__info {
+        display: none;
+        width: 20vw;
+        height: 20vw;
+        background-color: $accent-color;
+        border-radius: 10px;
+        transform: scale(1.01);
+
+        .card__title {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+
+      .card__btn {
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        text-transform: capitalize;
+        background-color: $secondary-color;
+        padding: 10px 0px;
+        width: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.2s linear 0s;
+        margin-top: 20px;
+
+        &:hover {
+          text-indent: -20px;
+          color: #000;
+          &:before {
+            opacity: 1;
+            text-indent: 0px;
+          }
+        }
+
+        &::before {
+          content: "→";
+          font-size: 30px;
+          position: absolute;
+          color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          right: 0;
+          top: -2px;
+          opacity: 0;
+          height: 100%;
+          width: 40px;
+          transition: all 0.2s linear 0s;
+        }
+      }
+    }
+  }
+}
+
+/************************CONTACT**********************/
+
+.contact {
+  @include page();
+  padding-bottom: 60px;
+
+  &__form {
+    width: 40vw;
+    margin-bottom: 40px;
+
+    .form__btn {
+      padding: 8px 32px;
+      border: none;
+      @include button();
+    }
+    .form-alert {
+      color: $secondary-color;
+    }
+  }
+
+  .message-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    h3 {
+      margin-top: 20px;
+    }
+  }
+
+  &__social {
+    a {
+      margin-right: 40px;
+
+      svg:hover {
+        fill: $secondary-color;
+      }
+    }
+    a:last-child {
+      margin: 0;
+    }
+  }
+}
